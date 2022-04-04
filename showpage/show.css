@@ -87,14 +87,28 @@ h1{
     }
 }
 
-@media screen and (max-width: 479px) {
-    .container {
-        width: 90%;
-        padding-left: 60px;
-       
+/* media query_________________________________________________... */
+
+@media screen and (max-width: 480px) { 
+    
+    .container{
+        margin: 0;
     }
-    .div-input-p {
-        width: 350px;
-        margin-left: 50px;
-    }
-}
+    
+    
+ 
+ 
+ }
+ 
+ @media screen and (min-width: 481px) and (max-width: 768px) {
+ 
+     .container{
+        margin: 0;
+        
+     }
+   
+    
+ }
+ @media screen and (min-width: 769px) and (max-width: 1279px){
+ 
+ }
