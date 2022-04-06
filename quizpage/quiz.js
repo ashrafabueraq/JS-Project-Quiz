@@ -1,6 +1,6 @@
-f = []
-syff = []
-pass = []
+f = []  //  array for number of Incorect question
+syff = []   // symbol of wrong quastion
+pass = []   //  array for number of correct question
 test=[]
 let i = 0
 let n = 0;
@@ -232,7 +232,7 @@ if (i == 0 && r == 0) {
 }
 
 
-// to get berder of answer effict ehen you click it
+// to get berder of answer effict then you click it
 
 function divAple(P) {
 
@@ -264,7 +264,7 @@ function butAple(){
 function orph() {
     
 
-    // intro to IQ section
+    // intro to IQ section  
     if (i == 0 && r == 1) {
         r += 1
         document.getElementById("div1").style.display = "block"
@@ -281,7 +281,9 @@ function orph() {
         document.getElementById("ans3").innerHTML = myQ[0].answers["c"];
 
         document.getElementById("ans4").innerHTML = myQ[0].answers["d"];
-        return
+
+        document.getElementById("button-next").disabled=true;
+        return 
     }
 
     // intro to english section
@@ -434,7 +436,7 @@ function orph() {
 const startingMinutes=30;
 
 //hours to minutes
-let time=startingMinutes * 60;
+let time=startingMinutes * 60;  // 1800 second 
 
 const countdownEl=document.getElementById("countdown");
 
@@ -443,12 +445,13 @@ setInterval(updatecountdown,1000);
 
 function updatecountdown()
 {   //to get the number of full minutes
-    const minutes=Math.floor(time/60);
+    const minutes=Math.floor(time/60);   // 1800/60 = 30 min
     //to get the number of full seconds
     let seconds=time % 60;
-    seconds=seconds<30 ?  '0' +seconds:seconds;
+    seconds=seconds<30 ? " "  +seconds:seconds;
     //enter value of minutes and seconds to <p> tag
     countdownEl.innerHTML=`${minutes} : ${seconds}`;
     time--;
     
 }
+
